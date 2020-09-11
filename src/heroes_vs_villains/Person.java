@@ -2,6 +2,7 @@ package heroes_vs_villains;
 
 public class Person {
     private String name;
+    private String type;
     private int attack;
     private int defense;
     private int hitpoints;
@@ -13,6 +14,12 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String name) { this.type = type; }
 
     public int getAttack() {
         return attack;
@@ -57,9 +64,9 @@ public class Person {
 
 //  Damage function
     public static void damage(Person attacker, Person defender) {
-        if(attacker.getName() == "Hero") { // used to always randomize attack
+        if(attacker.getType() == "Hero") { // used to always randomize attack
             attacker.setAttack(attacker.randomizer(40, 100));
-        } else if(attacker.getName() == "Villain") { // used to always randomize attack
+        } else if(attacker.getType() == "Villain") { // used to always randomize attack
             attacker.setAttack((attacker.randomizer(30, 50)));
         }
         int damage = attacker.getAttack() - defender.getDefense() / 2;

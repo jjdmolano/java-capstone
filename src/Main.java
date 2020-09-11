@@ -8,6 +8,9 @@ public class Main {
         Hero hero = new Hero();
         Villain villain = new Villain();
 
+        hero.setName("Jobert");
+        villain.setName("Godzilla");
+
         System.out.println(hero.toString());
         System.out.println(villain.toString());
         System.out.println("======= End of hero and villain info strings =======");
